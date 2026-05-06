@@ -1384,13 +1384,23 @@ dd {
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
   }
 
   .goal-tile.featured,
   .goal-tile.medium,
   .goal-tile.medium.warm {
-    grid-column: span 2;
+    grid-column: auto;
+  }
+
+  .goal-tile.featured {
+    grid-row: auto;
+    min-height: auto;
+  }
+
+  .goal-tile.compact.ink {
+    grid-column: auto;
   }
 
   .logic-route,
