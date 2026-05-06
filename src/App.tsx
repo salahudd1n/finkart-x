@@ -147,37 +147,37 @@ const galleryCards = [
     title: 'Save for education',
     copy: 'Plan for school, university, or study abroad with a clear monthly target.',
     shape: 'featured',
-    icon: 'education',
+    iconSrc: '/icons/ic_education.svg',
   },
   {
     title: 'Prepare for Hajj or Umrah',
     copy: 'See how much you may need and which products can help you save.',
     shape: 'medium',
-    icon: 'hajj',
+    iconSrc: '/icons/ic_hajj.svg',
   },
   {
     title: 'Save for marriage',
     copy: 'Find savings and deposit options based on your target amount.',
     shape: 'medium warm',
-    icon: 'marriage',
+    iconSrc: '/icons/ic_marriage.svg',
   },
   {
     title: 'Build emergency savings',
     copy: 'Keep money ready for medical, family, or urgent needs.',
     shape: 'compact',
-    icon: 'emergency',
+    iconSrc: '/icons/ic_emergency_fund.svg',
   },
   {
     title: 'Find the right credit card',
     copy: 'Compare fees, benefits, waivers, and eligibility.',
     shape: 'compact ink',
-    icon: 'card',
+    iconSrc: '/icons/ic_credit%20card.svg',
   },
   {
     title: 'Make savings grow safely',
     copy: 'Compare savings and fixed deposit options in clear amounts.',
     shape: 'compact',
-    icon: 'growth',
+    iconSrc: '/icons/ic_savings.svg',
   },
 ]
 
@@ -455,8 +455,13 @@ function App() {
       <section className="hero-route section" aria-labelledby="hero-title">
         <nav className="topbar" aria-label="Primary">
           <a className="brand" href="#top">
-            <span>F</span>
-            Finkart
+            <img
+              className="brand-logo"
+              src="/logo_finkart_by_sslcommerz.svg"
+              alt="Finkart"
+              height={38}
+              width={81}
+            />
           </a>
           <div className="topbar-links">
             <a href="#goals">Goals</a>
@@ -506,7 +511,7 @@ function App() {
         <div className="gallery-grid">
           {galleryCards.map((card) => (
             <article className={`goal-tile ${card.shape}`} key={card.title}>
-              <GoalIcon type={card.icon} />
+              <img className="product-icon" src={card.iconSrc} alt="" aria-hidden="true" />
               <h3>{card.title}</h3>
               <p>{card.copy}</p>
               <a href="#preview">See products</a>
@@ -627,8 +632,13 @@ function App() {
         <div className="footer-main">
           <div className="footer-brand">
             <a className="brand" href="#top">
-              <span>F</span>
-              Finkart
+              <img
+                className="brand-logo"
+                src="/logo_finkart_by_sslcommerz.svg"
+                alt="Finkart"
+                height={38}
+                width={81}
+              />
             </a>
             <p>
               Find suitable financial products based on your goal, income, and

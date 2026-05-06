@@ -54,16 +54,11 @@ a {
   letter-spacing: -0.01em;
 }
 
-.brand span {
-  display: grid;
-  width: 38px;
+.brand-logo {
+  display: block;
   height: 38px;
-  place-items: center;
-  border: 1px solid rgba(14, 25, 24, 0.16);
-  border-radius: 12px 8px 12px 8px;
-  background: #fffaf0;
-  color: var(--emerald);
-  box-shadow: 0 14px 28px rgba(14, 25, 24, 0.1);
+  width: auto;
+  max-width: 140px;
 }
 
 .topbar-links {
@@ -630,6 +625,17 @@ dd {
   margin-bottom: 26px;
   color: currentColor;
   opacity: 0.78;
+}
+
+.product-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 26px;
+}
+
+.goal-tile.featured .product-icon,
+.goal-tile.compact.ink .product-icon {
+  filter: brightness(0) invert(1);
 }
 
 .goal-tile.featured .goal-icon,
