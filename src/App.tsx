@@ -259,67 +259,6 @@ function useRouteActivation() {
   return { ref, active }
 }
 
-function GoalIcon({ type }: { type: string }) {
-  const common = {
-    fill: 'none',
-    stroke: 'currentColor',
-    strokeLinecap: 'round' as const,
-    strokeLinejoin: 'round' as const,
-    strokeWidth: 1.8,
-  }
-
-  return (
-    <svg className="goal-icon" viewBox="0 0 48 48" aria-hidden="true">
-      {type === 'education' && (
-        <>
-          <path {...common} d="M9 17l15-7 15 7-15 7-15-7z" />
-          <path {...common} d="M15 21v9c5 4 13 4 18 0v-9" />
-          <path {...common} d="M39 17v12" />
-        </>
-      )}
-      {type === 'hajj' && (
-        <>
-          <path {...common} d="M15 32c-4-5-4-13 1-18 4-4 10-5 15-2-4 1-7 5-7 10 0 6 4 10 10 10-6 4-14 4-19 0z" />
-          <path {...common} d="M33 13l1.5 3 3 .5-2.2 2.1.5 3-2.8-1.5-2.8 1.5.5-3-2.2-2.1 3-.5 1.5-3z" />
-        </>
-      )}
-      {type === 'marriage' && (
-        <>
-          <circle {...common} cx="20" cy="25" r="8" />
-          <circle {...common} cx="29" cy="23" r="8" />
-          <path {...common} d="M18 13h8l3 6" />
-        </>
-      )}
-      {type === 'emergency' && (
-        <>
-          <path {...common} d="M24 8l15 8v10c0 9-6 13-15 16C15 39 9 35 9 26V16l15-8z" />
-          <path {...common} d="M24 17v14" />
-          <path {...common} d="M17 24h14" />
-        </>
-      )}
-      {type === 'card' && (
-        <>
-          <rect {...common} x="8" y="14" width="32" height="22" rx="4" />
-          <path {...common} d="M8 21h32" />
-          <path {...common} d="M15 29h9" />
-          <path {...common} d="M31 29h3" />
-        </>
-      )}
-      {type === 'growth' && (
-        <>
-          <path {...common} d="M11 35h26" />
-          <path {...common} d="M15 31V19" />
-          <path {...common} d="M24 31V13" />
-          <path {...common} d="M33 31V22" />
-          <path {...common} d="M14 17c6 1 11-1 15-6" />
-          <path {...common} d="M29 11h-6" />
-          <path {...common} d="M29 11v6" />
-        </>
-      )}
-    </svg>
-  )
-}
-
 function StepCue({ type }: { type: string }) {
   const common = {
     fill: 'none',
